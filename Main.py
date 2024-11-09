@@ -82,16 +82,19 @@ def sales():
           if einp == 1:
                x = int(input("What would you like to change it to? -: "))
                sl.iloc[0] = x
+               sl.to_csv('sales.csv', index=False, mode= 'w')
                print('Changed')
                ret_sl()
           elif einp == 2:
                x = int(input("What would you like to change it to? -: "))
                sl.iloc[1] = x
+               sl.to_csv('sales.csv', index=False, mode= 'w')
                print('Changed')
                ret_sl()
           elif einp == 3:
                x = int(input("What would you like to change it to? -: "))
                sl.iloc[0] = x
+               sl.to_csv('sales.csv', index=False, mode= 'w')
                print('Changed')
                ret_sl()
 
