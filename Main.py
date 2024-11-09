@@ -103,7 +103,7 @@ def sales():
 
 
 def stock():
-     print('stock')
+     print("DOESN'T WORK!! GO BACK" )
 
 def employee():
      e = """
@@ -199,9 +199,11 @@ def prod():
      
      if Pd_inp == 1:
           print(product)
+          ret_pd()
      
      elif  Pd_inp == 2:
           print('')
+          ret_pd()
 
      elif  Pd_inp == 3:
           fp = input('Enter the product name: ')
@@ -209,6 +211,7 @@ def prod():
           print('                                                  ')
           print('                      ****                        ')
           print(sr)
+          ret_pd()
 
      elif  Pd_inp == 4:
           Chp = input("Please enter the name of the product you'd like to change the price of:- ")
@@ -226,6 +229,10 @@ def help():
     print("4 - Product related operations")
     print("5 - Employee related operations")
     print("6 - Help (Displays this help message)")
+    print("------------------------------------------------------------------------------------------------")
+    print("")
+    print("")
+    main()
 #help done
 
 #main def to redirect
