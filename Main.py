@@ -22,20 +22,22 @@ def sales():
      print(S_opt)
 
      S_inp = int(input("Enter a number between 1-4: "))
+     sl = pd.read_csv('sales.csv')
      
-     
-
      if S_inp == 1:
-          print('')
+          print(sl.iloc[0])
      
      elif  S_inp == 2:
-          print('')
+          print(sl.iloc[1])
 
      elif  S_inp == 3:
-          print('')
+          print(sl.iloc[2])
 
      elif  S_inp == 4:
-          print('')
+          print(""" 
+       [1] Edit Yesterday's Sale               [2] EditThis Year's Sale
+       [3] Edit This Month's Sale              
+           """)
 
 def stock():
      print('stock')
@@ -89,17 +91,20 @@ def employee():
      
      if St_inp == 1:
           print(emp)
+          ret_st()
      
      elif  St_inp == 2:
           print('')
-
+          ret_st()
      elif  St_inp == 3:
           workers = emp[emp['Job Title'] == 'Worker']
           print(workers)
+          ret_st()
 
      elif  St_inp == 4:
           restockers = emp[emp['Job Title'] == 'Restocker']
           print(restockers)
+          ret_st()
 #employee done     
      
 
@@ -123,7 +128,35 @@ def prod():
      """
      print(p)
      product = pd.read_csv('prod.csv', names = ['Product Name', 'Price'])
+     
+     def ret_pd():
+          print(""" 
+                What do you want to do next?
 
+      [1] Go to Main Page              [2] Go Back
+      [3] Exit
+                
+           """)
+          gb = int(input('----->>'))
+          if gb == 1:
+               main()
+          elif gb == 2:
+               prod()
+          elif gb == 3:
+               print(""" 
+
+          U _____ u __  __               _____               _   _     ____      
+          \| ___"|/ \ \/"/      ___     |_ " _|     ___     | \ |"| U /"___|u    
+           |  _|"   /\  /\     |_"_|      | |      |_"_|   <|  \| |>\| |  _ /    
+           | |___  U /  \ u     | |      /| |\      | |    U| |\  |u | |_| |     
+           |_____|  /_/\_\    U/| |\u   u |_|U    U/| |\u   |_| \_|   \____|     
+           <<   >>,-,>> \\_.-,_|___|_,-._// \\_.-,_|___|_,-.||   \\,-._)(|_      
+          (__) (__)\_)  (__)\_)-' '-(_/(__) (__)\_)-' '-(_/ (_")  (_/(__)__)  
+                     
+           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
+
+                    """)
+               sys.exit()
           
      Pd_inp = int(input("Enter a number between 1-4: "))
      
