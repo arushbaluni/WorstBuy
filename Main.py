@@ -1,4 +1,6 @@
 import pandas as pd
+import sys
+
 
 
 def sales():
@@ -53,7 +55,36 @@ def employee():
      """
      print(e)
      emp = pd.read_csv('employee.csv', names=['Name', 'Job Title'])
-     
+
+     def ret_st():
+          print(""" 
+                What do you want to do next?
+
+      [1] Go to Main Page              [2] Go Back
+      [3] Exit
+                
+           """)
+          gb = int(input('----->>'))
+          if gb == 1:
+               main()
+          elif gb == 2:
+               employee()
+          elif gb == 3:
+               print(""" 
+
+          U _____ u __  __               _____               _   _     ____      
+          \| ___"|/ \ \/"/      ___     |_ " _|     ___     | \ |"| U /"___|u    
+           |  _|"   /\  /\     |_"_|      | |      |_"_|   <|  \| |>\| |  _ /    
+           | |___  U /  \ u     | |      /| |\      | |    U| |\  |u | |_| |     
+           |_____|  /_/\_\    U/| |\u   u |_|U    U/| |\u   |_| \_|   \____|     
+           <<   >>,-,>> \\_.-,_|___|_,-._// \\_.-,_|___|_,-.||   \\,-._)(|_      
+          (__) (__)\_)  (__)\_)-' '-(_/(__) (__)\_)-' '-(_/ (_")  (_/(__)__)  
+                     
+           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
+
+                    """)
+               sys.exit()
+                    
      St_inp = int(input("Enter a number between 1-4: "))
      
      if St_inp == 1:
@@ -126,6 +157,67 @@ def help():
     print("5 - Employee related operations")
     print("6 - Help (Displays this help message)")
 #help done
+
+#main def to redirect
+
+
+def main():
+     x = """
+----------------------------------------------------------------------
+     __      __                      __    __________                
+    /  \    /  \___________  _______/  |_  \______   \__ __ ___.__.
+   \   \/\/   /  _ \_  __ \/  ___/\   __\  |    |  _/  |  <   |  |
+    \        (  <_> )  | \/\___ \  |  |    |    |   \  |  /\___  |
+     \__/\  / \____/|__|  /____  > |__|    |______  /____/ / ____|
+          \/                   \/                 \/       \/     
+          
+"""
+     print(x)
+     print('                  Welcome to Worst Buy Shop Manager!' )
+     print('                                                    ' )
+     print('                Choose the operation you want to perform' )
+
+
+     Ops = """
+
+       [1] Sales related                [2] Liabilities
+       [3] Stock                        [4] Products Related
+       [5] Employees related            [6] Help
+
+
+      """
+
+     print(Ops)
+     inp1= int(input())
+     inp1_str = str(inp1)
+
+     if inp1 == 1 :
+          sales()
+
+     elif inp1 == 2 :
+          liab()
+
+     elif inp1 == 3 :
+          stock()
+
+     elif inp1 == 4 :
+          prod()
+
+     elif inp1 == 5 :
+          employee()
+
+     elif inp1 == 6 :
+          help()
+
+     else:
+          print("Invalid choice. Please enter a number between 1 and 6. Type 'help' for help.")
+          inp2 = str(input())
+
+          if inp2 == 'help':
+            print("HELP TEXT")
+
+
+
 
 #def separation **************************************************************************
 
