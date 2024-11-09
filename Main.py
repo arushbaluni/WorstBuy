@@ -1,7 +1,27 @@
 import pandas as pd
 import sys
 
+def exit():
+          print(""" 
 
+                                                                                                        
+     ______                    ____  _________________  ____  _____   ______         _____    
+ ___|\     \  _____      _____|    |/                 \|    ||\    \ |\     \    ___|\    \   
+|     \     \ \    \    /    /|    |\______     ______/|    | \\    \| \     \  /    /\    \  
+|     ,_____/| \    \  /    / |    |   \( /    /  )/   |    |  \|    \  \     ||    |  |____| 
+|     \--'\_|/  \____\/____/  |    |    ' |   |   '    |    |   |     \  |    ||    |    ____ 
+|     /___/|    /    /\    \  |    |      |   |        |    |   |      \ |    ||    |   |    |
+|     \____|\  /    /  \    \ |    |     /   //        |    |   |    |\ \|    ||    |   |_,  |
+|____ '     /|/____/ /\ \____\|____|    /___//         |____|   |____||\_____/||\ ___\___/  /|
+|    /_____/ ||    |/  \|    ||    |   |`   |          |    |   |    |/ \|   ||| |   /____ / |
+|____|     | /|____|    |____||____|   |____|          |____|   |____|   |___|/ \|___|    | / 
+  \( |_____|/   \(        )/    \(       \(              \(       \(       )/     \( |____|/  
+   '    )/       '        '      '        '               '        '       '       '   )/     
+        '                                                                              '      
+           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
+
+                    """)
+          sys.exit()
 
 def sales():
      S_opt = """
@@ -24,20 +44,60 @@ def sales():
      S_inp = int(input("Enter a number between 1-4: "))
      sl = pd.read_csv('sales.csv')
      
+     def ret_sl():
+          print(""" 
+                What do you want to do next?
+
+      [1] Go to Main Page              [2] Go Back
+      [3] Exit
+                
+           """)
+          gb = int(input('----->>'))
+          if gb == 1:
+               main()
+          elif gb == 2:
+               sales()
+          elif gb == 3:
+               exit()
+
      if S_inp == 1:
-          print(sl.iloc[0])
+          print("$",sl.iloc[0])
+          ret_sl()
      
      elif  S_inp == 2:
-          print(sl.iloc[1])
+          print("$",sl.iloc[1])
+          ret_sl()
 
      elif  S_inp == 3:
-          print(sl.iloc[2])
+          print("$",sl.iloc[2])
+          ret_sl()
 
      elif  S_inp == 4:
           print(""" 
        [1] Edit Yesterday's Sale               [2] EditThis Year's Sale
        [3] Edit This Month's Sale              
            """)
+          einp = int(input())
+
+          if einp == 1:
+               x = int(input("What would you like to change it to? -: "))
+               sl.iloc[0] = x
+               print('Changed')
+               ret_sl()
+          elif einp == 2:
+               x = int(input("What would you like to change it to? -: "))
+               sl.iloc[1] = x
+               print('Changed')
+               ret_sl()
+          elif einp == 3:
+               x = int(input("What would you like to change it to? -: "))
+               sl.iloc[0] = x
+               print('Changed')
+               ret_sl()
+
+
+
+
 
 def stock():
      print('stock')
@@ -72,20 +132,7 @@ def employee():
           elif gb == 2:
                employee()
           elif gb == 3:
-               print(""" 
-
-          U _____ u __  __               _____               _   _     ____      
-          \| ___"|/ \ \/"/      ___     |_ " _|     ___     | \ |"| U /"___|u    
-           |  _|"   /\  /\     |_"_|      | |      |_"_|   <|  \| |>\| |  _ /    
-           | |___  U /  \ u     | |      /| |\      | |    U| |\  |u | |_| |     
-           |_____|  /_/\_\    U/| |\u   u |_|U    U/| |\u   |_| \_|   \____|     
-           <<   >>,-,>> \\_.-,_|___|_,-._// \\_.-,_|___|_,-.||   \\,-._)(|_      
-          (__) (__)\_)  (__)\_)-' '-(_/(__) (__)\_)-' '-(_/ (_")  (_/(__)__)  
-                     
-           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
-
-                    """)
-               sys.exit()
+               exit()
                     
      St_inp = int(input("Enter a number between 1-4: "))
      
@@ -143,20 +190,7 @@ def prod():
           elif gb == 2:
                prod()
           elif gb == 3:
-               print(""" 
-
-          U _____ u __  __               _____               _   _     ____      
-          \| ___"|/ \ \/"/      ___     |_ " _|     ___     | \ |"| U /"___|u    
-           |  _|"   /\  /\     |_"_|      | |      |_"_|   <|  \| |>\| |  _ /    
-           | |___  U /  \ u     | |      /| |\      | |    U| |\  |u | |_| |     
-           |_____|  /_/\_\    U/| |\u   u |_|U    U/| |\u   |_| \_|   \____|     
-           <<   >>,-,>> \\_.-,_|___|_,-._// \\_.-,_|___|_,-.||   \\,-._)(|_      
-          (__) (__)\_)  (__)\_)-' '-(_/(__) (__)\_)-' '-(_/ (_")  (_/(__)__)  
-                     
-           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
-
-                    """)
-               sys.exit()
+               exit()
           
      Pd_inp = int(input("Enter a number between 1-4: "))
      
@@ -278,7 +312,7 @@ Ops = """
        [5] Employees related            [6] Help
 
 
-"""
+ """
 
 print(Ops)
 inp1= int(input())
@@ -308,6 +342,3 @@ else:
 
      if inp2 == 'help':
        print("HELP TEXT")
-
-
-
