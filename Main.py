@@ -1,10 +1,6 @@
 import pandas as pd
 
 
-
-
-
-
 def sales():
      S_opt = """
          
