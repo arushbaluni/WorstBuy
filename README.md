@@ -18,6 +18,8 @@ A command-line application that assists with managing various shop operations, i
     - **sales.csv**: Contains sales data
     - **employee.csv**: Contains employee details (Name, Job Title)
     - **prod.csv**: Contains product information (Product Name, Price)
+    - **Liab.csv**: Contains all the Liabilities (Liability Name, Amount, Due Date)
+    - **stock.csv**: Contains product information (Product Name, Stock)
 
 ## Usage
 
