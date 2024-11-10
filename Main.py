@@ -103,7 +103,55 @@ def sales():
 
 
 def stock():
-     print("DOESN'T WORK!! GO BACK" )
+
+     p = """
+     -o----o----o----o----o----o----o----o----o----o----o----o----o-
+          _     ______              _            _            _    
+       /\| |/\  | ___ \            | |          | |        /\| |/\ 
+       \ ` ' /  | |_/ / __ ___   __| |_   _  ___| |_ ___   \ ` ' / 
+      |_     _| |  __/ '__/ _ \ / _` | | | |/ __| __/ __| |_     _|
+       / , . \  | |  | | | (_) | (_| | |_| | (__| |_\__ \  / , . \ 
+       \/|_|\/  \_|  |_|  \___/ \__,_|\__,_|\___|\__|___/  \/|_|\/
+       
+      
+      [1] List Product               [2] Find Specific Product
+                                                  
+     """
+     print(p)
+     stockk = pd.read_csv('stock.csv', names = ['Product Name', 'Stock'])
+     
+     def ret_pd():
+          print(""" 
+                What do you want to do next?
+
+      [1] Go to Main Page              [2] Go Back
+      [3] Exit
+                
+           """)
+          gb = int(input('----->>'))
+          if gb == 1:
+               main()
+          elif gb == 2:
+               prod()
+          elif gb == 3:
+               exit()
+          
+     Pd_inp = int(input("Enter a number between 1-4: "))
+     
+     if Pd_inp == 1:
+          print(product)
+          ret_pd()
+     
+
+     elif  Pd_inp == 2:
+          fp = input('Enter the product name: ')
+          sr = stockk[stockk['Product Name'] == fp]
+          print('                                                  ')
+          print('                      ****                        ')
+          print(sr)
+          ret_pd()
+
+
 
 def employee():
      e = """
