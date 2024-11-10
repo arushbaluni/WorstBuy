@@ -23,13 +23,21 @@ A command-line application that assists with managing various shop operations, i
 
 To start the program, execute the command from the terminal in the same directory where the project is:
 
+### For Windows
+
 ```bash
-python main.py
+python Main.py
 ```
 or
 
 ```bash
-py main.py
+py Main.py
+```
+
+### For Linux
+
+```bash
+python3 Main.py
 ```
 
 Upon running, the main menu will appear, prompting you to choose an operation based on the options provided. Enter a number (1-6) to access different functionalities, and follow the prompts to view or edit data as needed.
