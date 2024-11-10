@@ -18,18 +18,28 @@ A command-line application that assists with managing various shop operations, i
     - **sales.csv**: Contains sales data
     - **employee.csv**: Contains employee details (Name, Job Title)
     - **prod.csv**: Contains product information (Product Name, Price)
+    - **Liab.csv**: Contains all the Liabilities (Liability Name, Amount, Due Date)
+    - **stock.csv**: Contains product information (Product Name, Stock)
 
 ## Usage
 
 To start the program, execute the command from the terminal in the same directory where the project is:
 
+### For Windows
+
 ```bash
-python main.py
+python Main.py
 ```
 or
 
 ```bash
-py main.py
+py Main.py
+```
+
+### For Linux
+
+```bash
+python3 Main.py
 ```
 
 Upon running, the main menu will appear, prompting you to choose an operation based on the options provided. Enter a number (1-6) to access different functionalities, and follow the prompts to view or edit data as needed.
@@ -38,8 +48,8 @@ Upon running, the main menu will appear, prompting you to choose an operation ba
 
 ```
 ----------------------------------------------------------------------  
-     __      __                      __    __________                  
-    /  \    /  \___________  _______/  |_  \______   \__ __ ___.__.  
+    __      __                      __    __________                  
+   /  \    /  \___________  _______/  |_  \______   \__ __ ___.__.  
    \   \/\/   /  _ \_  __ \/  ___/\   __\  |    |  _/  |  <   |  |  
     \        (  <_> )  | \/\___ \  |  |    |    |   \  |  /\___  |  
      \__/\  / \____/|__|  /____  > |__|    |______  /____/ / ____|  
