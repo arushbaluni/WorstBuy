@@ -34,6 +34,25 @@ py main.py
 
 Upon running, the main menu will appear, prompting you to choose an operation based on the options provided. Enter a number (1-6) to access different functionalities, and follow the prompts to view or edit data as needed.
 
+## Example
+
+```
+----------------------------------------------------------------------  
+     __      __                      __    __________                  
+    /  \    /  \___________  _______/  |_  \______   \__ __ ___.__.  
+   \   \/\/   /  _ \_  __ \/  ___/\   __\  |    |  _/  |  <   |  |  
+    \        (  <_> )  | \/\___ \  |  |    |    |   \  |  /\___  |  
+     \__/\  / \____/|__|  /____  > |__|    |______  /____/ / ____|  
+          \/                   \/                 \/       \/       
+          
+                  Welcome to Worst Buy Shop Manager!
+Choose the operation you want to perform
+       
+       [1] Sales related                [2] Liabilities
+       [3] Stock                        [4] Products Related
+       [5] Employees related            [6] Help
+```
+
 ## Features
 
 - **Manage Sales**: View and edit daily, monthly, and yearly sales data.
