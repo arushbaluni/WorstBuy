@@ -159,7 +159,41 @@ def employee():
      
 
 def liab():
-     print('lib')
+     print(""" 
+           ___      ___   _______  _______  ___     ___        ___   _______  ___   _______  _______ 
+          |   |    |   | |   _   ||  _    ||   |   |   |      |   | |       ||   | |       ||       |
+          |   |    |   | |  |_|  || |_|   ||   |   |   |      |   | |_     _||   | |    ___||  _____|
+          |   |    |   | |       ||       ||   |   |   |      |   |   |   |  |   | |   |___ | |_____ 
+          |   |___ |   | |       ||  _   | |   |   |   |___   |   |   |   |  |   | |    ___||_____  |
+          |       ||   | |   _   || |_|   ||   |   |       |  |   |   |   |  |   | |   |___  _____| |
+          |_______||___| |__| |__||_______||___|   |_______|  |___|   |___|  |___| |_______||_______|
+
+           [1] List Liabilities             [2] Go bcak to Main
+
+          """)
+     x= int(input())
+
+     def ret_lb():
+          print(""" 
+                What do you want to do next?
+
+      [1] Go to Main Page              [2] Exit
+                
+           """)
+          gb = int(input('----->>'))
+          if gb == 1:
+               main()
+          elif gb == 2:
+               exit()
+
+     if x == 1:
+          liabi = pd.read_csv('Liab.csv', names= ['Liability Name', 'Amount', 'Due Date'])
+          print(liabi)
+          ret_lb()
+     elif x==2:
+          exit()
+
+     
 
 def prod():
      p = """
