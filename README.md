@@ -21,7 +21,7 @@ A command-line application that assists with managing various shop operations, i
 
 ## Usage
 
-To start the program, execute the `main()` function from the console:
+To start the program, execute the command from the terminal in the same directory where the project is:
 
 ```bash
 python main.py
