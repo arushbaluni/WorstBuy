@@ -369,9 +369,8 @@ def main():
      else:
           print("Invalid choice. Please enter a number between 1 and 6. Type 'help' for help.")
           inp2 = str(input())
-
-          if inp2 == 'help':
-            print("HELP TEXT")
+          main()
+          
 
 
 
@@ -429,6 +428,4 @@ elif inp1 == 6 :
 else:
      print("Invalid choice. Please enter a number between 1 and 6. Type 'help' for help.")
      inp2 = str(input())
-
-     if inp2 == 'help':
-       print("HELP TEXT")
+     main()
