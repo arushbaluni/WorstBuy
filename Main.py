@@ -18,7 +18,7 @@ def exit():
   \( |_____|/   \(        )/    \(       \(              \(       \(       )/     \( |____|/  
    '    )/       '        '      '        '               '        '       '       '   )/     
         '                                                                              '      
-           @arushbaluni -  https://github.com/arushbaluni/EasyBuy
+           @arushbaluni -  https://github.com/arushbaluni/WorstBuy
 
                     """)
           sys.exit()
@@ -61,15 +61,16 @@ def sales():
                exit()
 
      if S_inp == 1:
-          print("$",sl.iloc[0])
+          x = ("Yesterday's", sl.iloc[1])
+          print(x)
           ret_sl()
      
      elif  S_inp == 2:
-          print("$",sl.iloc[1])
+          print("This Year's", sl.iloc[2])
           ret_sl()
 
      elif  S_inp == 3:
-          print("$",sl.iloc[2])
+          print("This Month", sl.iloc[3])
           ret_sl()
 
      elif  S_inp == 4:
@@ -81,21 +82,21 @@ def sales():
 
           if einp == 1:
                x = int(input("What would you like to change it to? -: "))
-               sl.iloc[0] = x
+               sl.iloc[1] = x
                sl.to_csv('sales.csv', index=False, mode= 'w')
-               print('Changed')
+               print('Value Changed')
                ret_sl()
           elif einp == 2:
                x = int(input("What would you like to change it to? -: "))
-               sl.iloc[1] = x
+               sl.iloc[2] = x
                sl.to_csv('sales.csv', index=False, mode= 'w')
-               print('Changed')
+               print('Value Changed')
                ret_sl()
           elif einp == 3:
                x = int(input("What would you like to change it to? -: "))
-               sl.iloc[0] = x
+               sl.iloc[3] = x
                sl.to_csv('sales.csv', index=False, mode= 'w')
-               print('Changed')
+               print('Value Changed')
                ret_sl()
 
 
@@ -214,7 +215,7 @@ def liab():
               / /__/ / _ `/ _ \/ / / / / / __/ / -_|_-<
              /____/_/\_,_/_.__/_/ /_/ /_/\__/_/\__/___/
                                           
-           [1] List Liabilities             [2] Go bcak to Main
+           [1] List Liabilities             [2] Go back to Main
 
           """)
      x= int(input())
@@ -329,6 +330,7 @@ def main():
              \/      \/      \/  \/              \/         \/          
           
 """
+#Font Graffiti - Patrojk.com
      print(x)
      print('                  Welcome to Easy Buy Shop Manager!' )
      print('                                                    ' )
